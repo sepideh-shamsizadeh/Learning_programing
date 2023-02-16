@@ -1,5 +1,5 @@
 import unittest
-import generator
+from python.Generators import generator
 
 
 class TestRangeGenerator(unittest.TestCase):
