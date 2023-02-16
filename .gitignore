@@ -1,4 +1,4 @@
- .idea/*
+.idea/*
 __pycache__/
 .idea/.gitignore
 .idea/Learning_programing.iml
@@ -6,4 +6,6 @@ __pycache__/
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
+.idea/
+__pycache__/
 
