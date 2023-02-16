@@ -15,7 +15,6 @@ def fibonacci_generator(n):
     For example, fibonacci_generator() should produce the values 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on.
     """
     fn = [0, 1]
-    f = 0
     yield 0
     yield 1
     i = 2
@@ -24,3 +23,15 @@ def fibonacci_generator(n):
         yield f
         fn.append(f)
         i += 1
+
+
+def filter_generator(func, iterable):
+    """
+    Write a generator function filter_generator(func, iterable) that generates the same sequence of values as the
+    built-in filter() function. For example, filter_generator(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6]) should produce
+    the values 2, 4, and 6.
+    """
+    for item in iterable:
+        if func(item):
+            yield item
+
