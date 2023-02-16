@@ -20,5 +20,11 @@ class TestFilterGenerator(unittest.TestCase):
         self.assertEqual(list(gen), [2, 4, 6])
 
 
+class TestFlattenGenerator(unittest.TestCase):
+    def test_flatten_generator(self):
+        gen = generator.flatten_generator([(1, 2), [3, 4], [5, [6, 7]]])
+        self.assertEqual(list(gen), [1, 2, 3, 4, 5, 6, 7])
+
+
 if __name__ == '__main__':
     unittest.main()

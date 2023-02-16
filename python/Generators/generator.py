@@ -35,3 +35,15 @@ def filter_generator(func, iterable):
         if func(item):
             yield item
 
+
+def flatten_generator(iterable):
+    """
+        Write a generator function flatten_generator(iterable) that takes an iterable that may contain nested iterables
+        and generates a flattened sequence of all the values. For example, flatten_generator([1, [2, 3], [4, [5, 6]]])
+        should produce the values 1, 2, 3, 4, 5, and 6.
+    """
+    for item in iterable:
+        if isinstance(item, (list, tuple)):
+            yield from flatten_generator(item)
+        else:
+            yield item
