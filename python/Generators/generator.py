@@ -47,3 +47,14 @@ def flatten_generator(iterable):
             yield from flatten_generator(item)
         else:
             yield item
+
+
+def prime_generator(n):
+    """
+    Write a generator function prime_generator() that generates an infinite sequence of prime numbers. For example,
+    prime_generator() should produce the values 2, 3, 5, 7, 11, 13, 17, 19, 23, and so on.
+    """
+    for num in range(2, n):
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                yield num

@@ -26,5 +26,11 @@ class TestFlattenGenerator(unittest.TestCase):
         self.assertEqual(list(gen), [1, 2, 3, 4, 5, 6, 7])
 
 
+class TestPrimeGenerator(unittest.TestCase):
+    def test_prime_generator(self):
+        gen = generator.prime_generator(20)
+        self.assertEqual(list(gen), [2, 3, 5, 7, 11, 13, 17, 19])
+
+
 if __name__ == '__main__':
     unittest.main()
